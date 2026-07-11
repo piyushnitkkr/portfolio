@@ -58,7 +58,7 @@ const Hero = () => {
         style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px' }}
       >
         <motion.a 
-          href="https://drive.google.com/file/d/15uqk4PVtrjyb1VKqpGjckNNYn1NziKqf/view?usp=drive_link" 
+          href="https://drive.google.com/drive/folders/1snRoGk0fhvF0R38HCx1RPp7UU_1zCW9o?usp=drive_link" 
           className="btn btn-primary"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
