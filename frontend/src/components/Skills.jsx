@@ -2,11 +2,30 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillCategories = [
-  { title: 'Languages', skills: ['C', 'C++', 'Java', 'JavaScript', 'Python', 'SQL'] },
-  { title: 'Frontend', skills: ['React.js', 'React Native', 'HTML5', 'CSS3', 'Tailwind CSS', 'Shadcn/ui'] },
-  { title: 'Backend & DBs', skills: ['FastAPI', 'Node.js', 'Express.js', 'Firebase', 'MongoDB', 'MySQL'] },
-  { title: 'AI & ML', skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP', 'Computer Vision', 'YOLOv5'] },
-  { title: 'Tools', skills: ['Git', 'GitHub', 'Streamlit', 'Docker', 'Postman'] },
+  {
+    title: 'Languages',
+    skills: ['C', 'C++', 'Java', 'JavaScript', 'Python', 'SQL'],
+  },
+  {
+    title: 'Frontend',
+    skills: ['React.js', 'React Native', 'HTML5', 'CSS3', 'Tailwind CSS', 'Shadcn/ui'],
+  },
+  {
+    title: 'Backend & Databases',
+    skills: ['FastAPI', 'Node.js', 'Express.js', 'Firebase', 'MongoDB', 'MySQL', 'REST APIs', 'Auth & Authorization'],
+  },
+  {
+    title: 'AI / ML & CV',
+    skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'CNNs', 'NLP', 'OCR', 'OpenCV', 'YOLOv5', 'Machine Learning'],
+  },
+  {
+    title: 'Cloud & Deployment',
+    skills: ['Firebase', 'Vercel', 'Render', 'FCM'],
+  },
+  {
+    title: 'Tools & Platforms',
+    skills: ['Git', 'GitHub', 'Streamlit', 'Postman', 'Wireshark', 'Cisco Packet Tracer', 'Tinkercad'],
+  },
 ];
 
 const Skills = () => {
@@ -37,10 +56,10 @@ const Skills = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.4, delay: index * 0.08 }}
+            transition={{ duration: 0.4, delay: index * 0.07 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
-            <h3 className="accent mono" style={{ fontSize: '1rem', marginBottom: '14px' }}>
+            <h3 className="accent mono" style={{ fontSize: '0.95rem', marginBottom: '14px' }}>
               {category.title}
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -52,7 +71,7 @@ const Skills = () => {
                     color: 'var(--text-primary)',
                     padding: '5px 12px',
                     borderRadius: '15px',
-                    fontSize: '0.82rem',
+                    fontSize: '0.8rem',
                     border: '1px solid var(--glass-border)',
                   }}
                   whileHover={{

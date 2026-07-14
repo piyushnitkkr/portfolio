@@ -71,7 +71,7 @@ const About = () => {
               fontSize: '0.88rem',
             }}
           >
-            {['JavaScript (ES6+)', 'React', 'Node.js', 'Python', 'MongoDB', 'FastAPI'].map((tech, i) => (
+            {['JavaScript', 'React.js / React Native', 'FastAPI', 'Python', 'MongoDB', 'TensorFlow / PyTorch'].map((tech, i) => (
               <motion.li
                 key={i}
                 variants={itemVariants}

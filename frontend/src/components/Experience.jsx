@@ -12,6 +12,24 @@ const Experience = () => {
     visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 120 } },
   };
 
+  const bullets = [
+    <>
+      Supported the <strong>RISE with SAP LE-RUN (ACN CIO)</strong> program, contributing to{' '}
+      <strong>24×7 production support</strong> of an enterprise SAP S/4HANA landscape spanning{' '}
+      <strong>5+ business-critical modules</strong> on cloud infrastructure.
+    </>,
+    <>
+      Monitored and triaged <strong>20+ system alerts weekly</strong> and resolved incident, change,
+      and problem tickets in <strong>ServiceNow</strong> with <strong>100% SLA adherence</strong>,
+      applying ITIL practices to accelerate root cause analysis.
+    </>,
+    <>
+      Validated <strong>SAP HANA database backup and recovery operations</strong> across full,
+      incremental, and log backups, ensuring <strong>99.9%+ backup success rate</strong> and disaster
+      recovery readiness for mission-critical ERP workloads.
+    </>,
+  ];
+
   return (
     <section id="experience">
       <motion.h2
@@ -39,7 +57,7 @@ const Experience = () => {
             alignItems: 'flex-start',
             flexWrap: 'wrap',
             gap: '8px',
-            marginBottom: '20px',
+            marginBottom: '6px',
           }}
         >
           <motion.h3
@@ -49,7 +67,7 @@ const Experience = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            AEH Intern{' '}
+            Advanced Application Engineering Analyst Intern{' '}
             <motion.span className="accent" whileHover={{ textShadow: '0 0 8px var(--accent-color)' }}>
               @ Accenture
             </motion.span>
@@ -67,31 +85,34 @@ const Experience = () => {
           </motion.span>
         </div>
 
+        <p
+          style={{
+            color: 'var(--accent-color)',
+            fontSize: '0.82rem',
+            fontFamily: 'Fira Code, monospace',
+            marginBottom: '18px',
+          }}
+        >
+          SAP S/4HANA · ServiceNow · ITIL · Cloud Infrastructure
+        </p>
+
         <motion.ul
-          style={{ color: 'var(--text-secondary)', listStyle: 'none' }}
+          style={{ color: 'var(--text-secondary)', listStyle: 'none', padding: 0 }}
           variants={listVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[
-            <>
-              Collaborated with <strong>3+ cross-functional teams</strong> to map enterprise software
-              workflows, contributing to documentation covering <strong>5 core business processes</strong>.
-            </>,
-            <>
-              Completed <strong>40+ hours</strong> of hands-on training across Agile methodologies, cloud
-              technologies, and software engineering practices through project-based learning modules.
-            </>,
-            <>
-              Participated in <strong>weekly</strong> technical training sessions and mentorship programs,
-              applying learnings to <strong>2 internal projects</strong> within the first month of joining.
-            </>,
-          ].map((point, i) => (
+          {bullets.map((point, i) => (
             <motion.li
               key={i}
               variants={itemVariants}
-              style={{ position: 'relative', paddingLeft: '30px', marginBottom: '12px', lineHeight: 1.75 }}
+              style={{
+                position: 'relative',
+                paddingLeft: '30px',
+                marginBottom: '12px',
+                lineHeight: 1.75,
+              }}
               whileHover={{ x: 5, color: 'var(--text-primary)' }}
             >
               <span className="accent" style={{ position: 'absolute', left: 0 }}>
