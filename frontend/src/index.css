@@ -235,15 +235,142 @@ textarea.form-control {
   color: var(--text-primary);
 }
 
-/* Responsive */
+/* =====================
+   Responsive – Mobile
+   ===================== */
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(75vw, 280px);
+  height: 100vh;
+  background: var(--card-bg);
+  border-left: 1px solid var(--glass-border);
+  z-index: 1050;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav .nav-link {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
-  section {
-    padding: 80px 20px;
+
+  .hamburger {
+    display: flex;
   }
+
+  .mobile-nav,
+  .mobile-nav-overlay {
+    display: flex;
+  }
+
+  .mobile-nav-overlay {
+    display: block;
+  }
+
+  section {
+    padding: 80px 18px;
+  }
+
   .navbar {
-    padding: 20px;
+    padding: 16px 20px;
+  }
+
+  .navbar.scrolled {
+    padding: 12px 20px;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+    white-space: normal;
+  }
+
+  .section-title::after {
+    max-width: 100px;
+  }
+
+  .glass-panel {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 70px 14px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
   }
 }

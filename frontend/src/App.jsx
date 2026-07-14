@@ -44,7 +44,7 @@ function App() {
       <Achievements />
       <Contact />
       <footer className="footer">
-        <p>Designed & Built by <span className="accent">Piyush Mittal</span> © 2024</p>
+        <p>Designed &amp; Built by <span className="accent">Piyush Mittal</span> © {new Date().getFullYear()}</p>
       </footer>
     </div>
   )
